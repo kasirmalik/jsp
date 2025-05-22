@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // by using Luhn algorithm
+        const validateCreditCard = (cardNum)=>{
+            // step 1
+            const cardNumStr = cardNum.replace(/\s/g, "");
+            // step 2 reverse the string
+            const cardNumArr = cardNumStr.split("").reverse();
+            
+            // step 3 double every second digit
+           const doubledDigits = cardNumArr.map((digit,index)=>{
+                if (index % 2 === 1) {
+                    return digit * 2
+                }else{
+                    return digit
+                }
+              
+           })
+              // step 4 subtract 9 from numbers over 9
+              const adjustedDigits = doubledDigits.map((digit)=>{
+                 if (digit > 9) {
+                      return digit - 9
+                 }else{
+                      return digit
+                 }})
+                // step 5 sum all the digits
+                const sum = adjustedDigits.reduce((acc,digit)=>{
+                    return acc + parseInt(digit)},0)
+                // step 6 check if the sum is divisible by 10
+                if (sum % 10 === 0) {
+                    return true}
+                 
+                else{
+                    return false
+                }
+             
+
+        }
+
+        console.log(validateCreditCard("4539 1488 0343 6467"))
+        console.log(validateCreditCard("4539 1488 0343 6468"))
+    </script>
+</body>
+</html
