@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const average = (arr)=>{
+            if(arr.length === 0) return undefined
+            if(arr.some(isNaN)) return undefined
+            if(arr.some(x => x < 0)) return undefined
+            if(arr.some(x => x > 100)) return undefined
+            if(arr.some(x => x % 1 !== 0)) return undefined
+           return arr.reduce((a,b) => a + b,0 )/ arr.length
+        }
+        console.log(average([1,2,3,4,5]))
+    </script>
+</body>
+</html>
