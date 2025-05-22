@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarChart</title>
+</head>
+<body>
+    <script>
+        const genratebarChart = (arr)=>{
+            const newArr = arr.map((curr,index)=>{
+               let star="";
+               let num = 0;
+               while (num < curr) {
+                star = star + "*"
+                num++
+               }
+               return star
+            })
+            console.log(newArr.join("\n"))
+        }
+        console.log(genratebarChart([5,3,9,2]))
+    </script>
+</body>
+</html>
