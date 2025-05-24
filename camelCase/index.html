@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const camelcase = (str)=>{
+        str = str.trim().split(" ")
+        str.map((curr)=>{
+           return  curr = curr.charAt(0).toUpperCase() + curr.slice(1).toLowerCase()
+           
+
+        })
+        return str
+
+    }
+    console.log(camelcase("hello world kasir"))
+   </script> 
+</body>
+</html>
