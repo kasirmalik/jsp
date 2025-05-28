@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const medaian = (arr)=>{
+            let arr1 = arr.sort((a,b)=> a-b)
+            let length = arr1.length
+            let med = Math.floor(length/2)
+            if (length%2 ===0) {
+                return (arr[med] + arr[med - 1])/2
+            }else{
+                return arr[med]
+            }
+            
+        }
+         console.log(medaian([1,2,5,4,3]))
+    </script>
+</body>
+</html>

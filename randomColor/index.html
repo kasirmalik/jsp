@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            margin-top: 20rem;
+            padding: 2rem;
+            border-radius: 9px;
+            border-style: none;
+            cursor: pointer;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="btn">Change BackGround Color </button>
+     </div>
+    <script> 
+       const randomColor = ()=>{   
+            const random = Math.random().toString(16).slice(2,8).padEnd(6,0)
+            document.body.style.backgroundColor = `#${random}`
+        }
+        document.getElementById('btn').addEventListener('click', randomColor)
+        randomColor()
+    </script>
+</body>
+</html>

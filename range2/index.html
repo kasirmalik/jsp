@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numberrange= (a,b)=>{
+            let arr = []
+           if(a<=b){
+            arr.push(a)
+            return numberrange(a+1,b,arr);
+           }
+           return arr
+        }
+        console.log(numberrange(1,5))
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const  longestWord=(str)=> {
+            if(str.trim().length===0) return false
+             let words= str.split(" ")
+            //  words = words.sort((a,b)=> a.length-b.length)
+
+            //  console.log(words)
+            //  return words.at(-1)
+           return words.reduce((a,b)=> b.length > a.length ? b: a)
+        }
+        console.log(longestWord("Watch thapa technical"))
+    </script>
+</body>
+</html>

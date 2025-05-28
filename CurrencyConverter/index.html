@@ -1,0 +1,24 @@
+<script>
+    const rates = {
+        USD:1,
+        EUR:0.9,
+        GBP:0.8,
+        INR:82,
+    }
+    const convertCurrency = (amount,Fc,Tc)=>{
+        let amountInUsd = 0;
+        if (Fc !== "USD") {
+            amountInUsd = amount /rates[Fc]
+        }else{
+            amountInUsd= amount
+        }
+        let amountConverted = 0;
+        if (Tc !== "USD") {
+            amountConverted = amountInUsd * rates[Tc]
+        }else{
+            amountConverted = amount
+        }
+        return amountConverted
+    }
+    console.log(convertCurrency(100,"USD","INR"))
+</script>
